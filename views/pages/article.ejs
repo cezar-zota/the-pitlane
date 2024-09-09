@@ -1,0 +1,30 @@
+<%- include('partials/header', { title: article.title }) %>
+
+<div class="container mt-4">
+  <h1><%= article.title %></h1>
+  <p><%= article.content %></p>
+  <hr />
+  <h3>Comments</h3>
+  <form action="/comments" method="POST">
+    <input type="hidden" name="article_id" value="<%= article.id %>" />
+    <div class="mb-3">
+      <label for="content" class="form-label">Your Comment</label>
+      <textarea class="form-control" id="content" name="content" rows="3" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Post Comment</button>
+  </form>
+  <ul class="list-group mt-3">
+    <% comments.forEach(comment => { %>
+    <li class="list-group-item">
+      <strong><%= comment.username %>:</strong> <%= comment.content %>
+      <% if (user && user.id === comment.user_id) { %>
+      <form action="/comments/<%= comment.id %>?_method=DELETE" method="POST" class="d-inline">
+        <button class="btn btn-danger btn-sm">Delete</button>
+      </form>
+      <% } %>
+    </li>
+    <% }) %>
+  </ul>
+</div>
+
+<%- include('partials/footer') %>
