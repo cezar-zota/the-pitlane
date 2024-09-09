@@ -1,0 +1,76 @@
+/* Dark Mode General Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Dark Mode Navbar */
+body.dark-mode .navbar {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .navbar-brand {
+  color: #e0e0e0;
+}
+
+body.dark-mode .nav-link {
+  color: #e0e0e0;
+}
+
+body.dark-mode .nav-link:hover {
+  background-color: #343a40;
+}
+
+/* Dark Mode Buttons */
+body.dark-mode .btn-primary {
+  background-color: #343a40;
+  color: #e0e0e0;
+}
+
+body.dark-mode .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Dark Mode Container */
+body.dark-mode .container {
+  background-color: #1f1f1f;
+}
+
+/* Dark Mode Footer */
+body.dark-mode .footer {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+/* Dark Mode Article Styles */
+body.dark-mode .article-content p {
+  color: #bdbdbd;
+}
+
+body.dark-mode .article-content img {
+  border: 1px solid #333;
+}
+
+/* Dark Mode Comment Section */
+body.dark-mode .comment-section li {
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .comment-form textarea {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+body.dark-mode .comment-form button {
+  background-color: #343a40;
+  color: white;
+}
+
+/* Dark Mode Links */
+body.dark-mode a {
+  color: #bb86fc;
+}
+
+body.dark-mode a:hover {
+  color: #ff79b0;
+}

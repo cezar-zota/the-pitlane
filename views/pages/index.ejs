@@ -1,0 +1,22 @@
+<%- include('partials/header', { title: 'Home' }) %>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-8">
+      <h1>Welcome to The Pitlane</h1>
+      <p>Your source for motorsport news</p>
+    </div>
+    <div class="col-md-4">
+      <h2>Latest Articles</h2>
+      <ul class="list-group">
+        <% articles.forEach(article => { %>
+        <li class="list-group-item">
+          <a href="/news/<%= article.id %>"><%= article.title %></a>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

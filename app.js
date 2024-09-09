@@ -8,6 +8,8 @@ const passport = require('passport');
 require('./config/passport');  // Passport config
 const { ensureAuthenticated } = require('./middlewares/authMiddleware');
 const app = express();
+const routes = require('./routes');
+const port = process.env.PORT || 3000;
 
 // EJS view engine
 app.set('view engine', 'ejs');
@@ -19,6 +21,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 // BodyParser Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+// Set up routes
+app.use('/', routes);
 
 // Express session
 app.use(session({
